@@ -1,0 +1,128 @@
+[gd_scene load_steps=18 format=3 uid="uid://cj2phaomqvlrn"]
+
+[ext_resource type="Script" path="res://scripts/GameOver.gd" id="1_g6aud"]
+[ext_resource type="Texture2D" uid="uid://06625pb2hnou" path="res://assets/sprites/PC Computer - Five Nights at Freddys - Main Menu Intro & Endings.png" id="1_k1i6s"]
+[ext_resource type="FontFile" uid="uid://4c8yafmumuau" path="res://assets/fonts/CONSOLA.TTF" id="2_wfw8b"]
+[ext_resource type="Texture2D" uid="uid://cj6vuws0eufit" path="res://assets/sprites/PC Computer - Five Nights at Freddys - Static.png" id="4_fgkc0"]
+[ext_resource type="AudioStream" uid="uid://b78b85pflgbfc" path="res://assets/audios/static.wav" id="5_qc87h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c56yd"]
+atlas = ExtResource("1_k1i6s")
+region = Rect2(0, 5776, 1280, 722)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qtwy5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c56yd")
+}],
+"loop": true,
+"name": &"BG",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a15ht"]
+font = ExtResource("2_wfw8b")
+font_size = 45
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kw35"]
+atlas = ExtResource("4_fgkc0")
+region = Rect2(0, 0, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ny00c"]
+atlas = ExtResource("4_fgkc0")
+region = Rect2(0, 722, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjw3v"]
+atlas = ExtResource("4_fgkc0")
+region = Rect2(0, 1444, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2h2w"]
+atlas = ExtResource("4_fgkc0")
+region = Rect2(0, 2166, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlpsi"]
+atlas = ExtResource("4_fgkc0")
+region = Rect2(0, 2888, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxgpl"]
+atlas = ExtResource("4_fgkc0")
+region = Rect2(0, 3610, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_au2xg"]
+atlas = ExtResource("4_fgkc0")
+region = Rect2(0, 4332, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tnnt7"]
+atlas = ExtResource("4_fgkc0")
+region = Rect2(0, 5054, 1280, 722)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tcjox"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kw35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ny00c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjw3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2h2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wlpsi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxgpl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_au2xg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tnnt7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_g6aud")
+
+[node name="BG" type="AnimatedSprite2D" parent="."]
+position = Vector2(575, 321)
+scale = Vector2(0.90625, 0.914127)
+sprite_frames = SubResource("SpriteFrames_qtwy5")
+animation = &"BG"
+autoplay = "BG"
+
+[node name="GameOverLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 585.0
+offset_right = 1125.0
+offset_bottom = 631.0
+text = "Game Over"
+label_settings = SubResource("LabelSettings_a15ht")
+
+[node name="static" type="AnimatedSprite2D" parent="."]
+position = Vector2(580, 319)
+scale = Vector2(0.975, 1.03601)
+sprite_frames = SubResource("SpriteFrames_tcjox")
+autoplay = "default"
+
+[node name="staticSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_qc87h")
+autoplay = true
+
+[connection signal="finished" from="staticSound" to="." method="_on_static_sound_finished"]

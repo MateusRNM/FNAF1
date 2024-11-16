@@ -1,0 +1,1160 @@
+[gd_scene load_steps=113 format=3 uid="uid://cnd4c85wbuiy2"]
+
+[ext_resource type="Script" path="res://scripts/Camera.gd" id="1_54ui4"]
+[ext_resource type="Texture2D" uid="uid://cj6vuws0eufit" path="res://assets/sprites/PC Computer - Five Nights at Freddys - Static.png" id="2_os1qn"]
+[ext_resource type="Texture2D" uid="uid://cjmbfkmavr6mr" path="res://assets/sprites/room sprites/camera/PizzariaMap.png" id="2_sitx5"]
+[ext_resource type="Texture2D" uid="uid://cjt8wx2q2qm5a" path="res://assets/sprites/room sprites/camera/CameraSelected.png" id="3_u23h8"]
+[ext_resource type="AudioStream" uid="uid://c2luutxaicq1i" path="res://assets/audios/camera/kitchen/kitchen1.wav" id="4_0nhmh"]
+[ext_resource type="Texture2D" uid="uid://ce7ek1as3f403" path="res://assets/sprites/room sprites/camera/CameraNotSelected.png" id="4_foiuy"]
+[ext_resource type="Texture2D" uid="uid://cu4dpbndyg824" path="res://assets/sprites/cameras/PC Computer - Five Nights at Freddys - Backstage.png" id="5_4sgqb"]
+[ext_resource type="FontFile" uid="uid://l5jvrdla0r7m" path="res://assets/fonts/pixeledFont.otf" id="5_ap3px"]
+[ext_resource type="AudioStream" uid="uid://co22oaqem3nkb" path="res://assets/audios/camera/kitchen/kitchen2.wav" id="5_qtqwa"]
+[ext_resource type="Texture2D" uid="uid://dfjxxs85mv2c4" path="res://assets/sprites/cameras/PC Computer - Five Nights at Freddys - Dining Area.png" id="5_xffsk"]
+[ext_resource type="AudioStream" uid="uid://smr8u3livmqi" path="res://assets/audios/camera/kitchen/kitchen3.wav" id="6_4ojgj"]
+[ext_resource type="Texture2D" uid="uid://bhixmgnn5kwvw" path="res://assets/sprites/cameras/PC Computer - Five Nights at Freddys - Restrooms.png" id="6_17den"]
+[ext_resource type="Texture2D" uid="uid://sko60u71gg6i" path="res://assets/sprites/cameras/PC Computer - Five Nights at Freddys - Pirates Cove.png" id="6_imxi8"]
+[ext_resource type="AudioStream" uid="uid://pr4memlghtuw" path="res://assets/audios/camera/cameraChangeSound.wav" id="6_qfpp4"]
+[ext_resource type="AudioStream" uid="uid://xcyw8ht8pgor" path="res://assets/audios/camera/kitchen/FreddysThemeTune.wav" id="7_32jrm"]
+[ext_resource type="AudioStream" uid="uid://ba5ftdffa37yj" path="res://assets/audios/camera/CameraMovingSound.wav" id="7_wgesg"]
+[ext_resource type="Texture2D" uid="uid://l2nmphd46qmp" path="res://assets/sprites/cameras/PC Computer - Five Nights at Freddys - Show Stage.png" id="9_xy4e1"]
+[ext_resource type="Texture2D" uid="uid://bdmv77coc8xf2" path="res://assets/sprites/room sprites/camera/recording.png" id="11_ucgot"]
+[ext_resource type="Texture2D" uid="uid://cg2o2nomsjiwy" path="res://assets/sprites/room sprites/camera/cameraEffect/4.png" id="12_opp4e"]
+[ext_resource type="Texture2D" uid="uid://domabfyerqcud" path="res://assets/sprites/cameras/PC Computer - Five Nights at Freddys - East Hall.png" id="12_stonh"]
+[ext_resource type="Texture2D" uid="uid://x257i20dsotl" path="res://assets/sprites/room sprites/camera/cameraEffect/6.png" id="13_832j5"]
+[ext_resource type="Texture2D" uid="uid://b13elaawa7kql" path="res://assets/sprites/cameras/PC Computer - Five Nights at Freddys - Supply Closet.png" id="13_ft60n"]
+[ext_resource type="Texture2D" uid="uid://dsif7nnux7r1t" path="res://assets/sprites/cameras/west hall/7.png" id="14_u4kp3"]
+[ext_resource type="Texture2D" uid="uid://d3picos1rdqnw" path="res://assets/sprites/room sprites/camera/cameraEffect/8.png" id="14_yrkib"]
+[ext_resource type="Texture2D" uid="uid://cmorelmiey0s5" path="res://assets/sprites/room sprites/camera/cameraEffect/9.png" id="15_we7vk"]
+[ext_resource type="Texture2D" uid="uid://rwlq5emaccw6" path="res://assets/sprites/cameras/west hall/8.png" id="15_xmajc"]
+[ext_resource type="Texture2D" uid="uid://cmtapdpo83rtf" path="res://assets/sprites/cameras/west hall/9.png" id="16_05t7c"]
+[ext_resource type="Texture2D" uid="uid://rrja0ktlcbjj" path="res://assets/sprites/room sprites/camera/cameraEffect/10.png" id="16_sfkuh"]
+[ext_resource type="Texture2D" uid="uid://cmiulcrdl2h83" path="res://assets/sprites/cameras/west hall/1.png" id="17_j3dqk"]
+[ext_resource type="Texture2D" uid="uid://ckxxdqx568yd" path="res://assets/sprites/cameras/west hall/10.png" id="17_lhicc"]
+[ext_resource type="Texture2D" uid="uid://b0xrwlt4s4sho" path="res://assets/sprites/room sprites/camera/cameraEffect/21.png" id="17_tc5yr"]
+[ext_resource type="Texture2D" uid="uid://bwap8iffy66kn" path="res://assets/sprites/cameras/west hall/4.png" id="18_81y0v"]
+[ext_resource type="Texture2D" uid="uid://jiypsywabdox" path="res://assets/sprites/room sprites/camera/cameraEffect/22.png" id="18_jcgm6"]
+[ext_resource type="Texture2D" uid="uid://dtnf31q5ubsf2" path="res://assets/sprites/cameras/west hall/11.png" id="18_vcgib"]
+[ext_resource type="Texture2D" uid="uid://pi6asqlum7yb" path="res://assets/sprites/room sprites/camera/cameraEffect/23.png" id="19_6l02k"]
+[ext_resource type="Texture2D" uid="uid://culxgdlc2nsmc" path="res://assets/sprites/cameras/west hall/12.png" id="19_7ik8m"]
+[ext_resource type="Texture2D" uid="uid://dmu1hpwsvrsyx" path="res://assets/sprites/room sprites/camera/cameraEffect/25.png" id="20_if41a"]
+[ext_resource type="Texture2D" uid="uid://c7so5u73je01u" path="res://assets/sprites/cameras/west hall/13.png" id="20_pgm3b"]
+[ext_resource type="Texture2D" uid="uid://b7ij283m0bu0d" path="res://assets/sprites/cameras/west hall/14.png" id="21_uk3qg"]
+[ext_resource type="Texture2D" uid="uid://bn3lh3xtfbu6o" path="res://assets/sprites/cameras/west hall/15.png" id="22_as6n0"]
+[ext_resource type="Texture2D" uid="uid://b075fwgkhtny8" path="res://assets/sprites/cameras/west hall/16.png" id="23_akup1"]
+[ext_resource type="Texture2D" uid="uid://dhm3r0bjgp136" path="res://assets/sprites/cameras/west hall/17.png" id="24_66l4e"]
+[ext_resource type="Texture2D" uid="uid://br56rxv8f8tpo" path="res://assets/sprites/cameras/west hall/18.png" id="25_aam74"]
+[ext_resource type="Texture2D" uid="uid://ye7semt2gpp6" path="res://assets/sprites/cameras/west hall/19.png" id="26_o0dol"]
+[ext_resource type="Texture2D" uid="uid://cjoee3gcj00vm" path="res://assets/sprites/cameras/west hall/20.png" id="27_4u3xf"]
+[ext_resource type="Texture2D" uid="uid://bg5lgvwkdasew" path="res://assets/sprites/cameras/west hall/21.png" id="28_cg4bg"]
+[ext_resource type="Texture2D" uid="uid://d0xsntj2d1tqt" path="res://assets/sprites/cameras/west hall/22.png" id="29_0s3r0"]
+[ext_resource type="Texture2D" uid="uid://8ivd7y0tguey" path="res://assets/sprites/cameras/west hall/23.png" id="30_a2hgk"]
+[ext_resource type="Texture2D" uid="uid://oo2g3e08rt2y" path="res://assets/sprites/cameras/west hall/24.png" id="31_5epd4"]
+[ext_resource type="Texture2D" uid="uid://dpv2sd47w8ccv" path="res://assets/sprites/cameras/west hall/25.png" id="32_34sus"]
+[ext_resource type="Texture2D" uid="uid://b15hjfsg8tsaj" path="res://assets/sprites/cameras/west hall/26.png" id="33_0e8fg"]
+[ext_resource type="Texture2D" uid="uid://boesunmobfjav" path="res://assets/sprites/cameras/west hall/27.png" id="34_qko53"]
+[ext_resource type="Texture2D" uid="uid://dhathulpc1lui" path="res://assets/sprites/cameras/west hall/28.png" id="35_4ke2r"]
+[ext_resource type="Texture2D" uid="uid://b6soj0fjyd055" path="res://assets/sprites/cameras/west hall/29.png" id="36_jg8a5"]
+[ext_resource type="Texture2D" uid="uid://om7ksqjrod40" path="res://assets/sprites/cameras/west hall/30.png" id="37_0vp23"]
+[ext_resource type="Texture2D" uid="uid://crc4s0v8ni6bo" path="res://assets/sprites/cameras/west hall/31.png" id="38_dqye6"]
+[ext_resource type="Texture2D" uid="uid://bflqnd1a17aqh" path="res://assets/sprites/cameras/west hall/32.png" id="39_ehjo1"]
+[ext_resource type="Texture2D" uid="uid://dpjiyujbm14y1" path="res://assets/sprites/cameras/west hall/33.png" id="40_d3pwf"]
+[ext_resource type="Texture2D" uid="uid://dqpkue0pr2np4" path="res://assets/sprites/cameras/west hall/34.png" id="41_nh8ic"]
+[ext_resource type="Texture2D" uid="uid://dmx5ks8blidxq" path="res://assets/sprites/cameras/west hall/35.png" id="42_gd02v"]
+[ext_resource type="Texture2D" uid="uid://l2s31h4qa8uq" path="res://assets/sprites/cameras/west hall/36.png" id="43_ha4tc"]
+[ext_resource type="Texture2D" uid="uid://cyopaw3xc7n2a" path="res://assets/sprites/cameras/west hall/37.png" id="44_fgawp"]
+[ext_resource type="Texture2D" uid="uid://ecbefqv6esq5" path="res://assets/sprites/cameras/west hall/38.png" id="45_5uddy"]
+[ext_resource type="Texture2D" uid="uid://fsh21kmedvyo" path="res://assets/sprites/cameras/west hall/39.png" id="46_kag0j"]
+[ext_resource type="Texture2D" uid="uid://oejhekjc17ld" path="res://assets/sprites/cameras/west hall/40.png" id="47_wcpu1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u81fw"]
+atlas = ExtResource("9_xy4e1")
+region = Rect2(0, 4320, 1600, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsi46"]
+atlas = ExtResource("9_xy4e1")
+region = Rect2(0, 2880, 1600, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kh7x"]
+atlas = ExtResource("9_xy4e1")
+region = Rect2(0, 2160, 1600, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c545q"]
+atlas = ExtResource("9_xy4e1")
+region = Rect2(0, 1440, 1600, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0d30"]
+atlas = ExtResource("9_xy4e1")
+region = Rect2(0, 0, 1600, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddkkg"]
+atlas = ExtResource("5_4sgqb")
+region = Rect2(0, 0, 1600, 723)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kcsj"]
+atlas = ExtResource("5_4sgqb")
+region = Rect2(0, 1446, 1600, 723)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wmyc"]
+atlas = ExtResource("5_4sgqb")
+region = Rect2(0, 2169, 1600, 723)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtxkw"]
+atlas = ExtResource("6_17den")
+region = Rect2(0, 0, 1600, 723)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbwtl"]
+atlas = ExtResource("6_17den")
+region = Rect2(0, 723, 1600, 723)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obo5p"]
+atlas = ExtResource("6_17den")
+region = Rect2(0, 1446, 1600, 723)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23s33"]
+atlas = ExtResource("6_17den")
+region = Rect2(0, 2169, 1600, 723)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8hj0"]
+atlas = ExtResource("5_xffsk")
+region = Rect2(0, 0, 1600, 723)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kd71f"]
+atlas = ExtResource("5_xffsk")
+region = Rect2(0, 723, 1600, 723)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgw5a"]
+atlas = ExtResource("5_xffsk")
+region = Rect2(0, 1446, 1600, 723)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drgj7"]
+atlas = ExtResource("5_xffsk")
+region = Rect2(0, 2169, 1600, 723)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elnda"]
+atlas = ExtResource("5_xffsk")
+region = Rect2(0, 2892, 1600, 723)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spyxi"]
+atlas = ExtResource("5_xffsk")
+region = Rect2(0, 3615, 1600, 723)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0ijk"]
+atlas = ExtResource("12_stonh")
+region = Rect2(0, 0, 1600, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggdga"]
+atlas = ExtResource("12_stonh")
+region = Rect2(0, 2888, 1600, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_an1qa"]
+atlas = ExtResource("12_stonh")
+region = Rect2(0, 3610, 1600, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_486nk"]
+atlas = ExtResource("12_stonh")
+region = Rect2(0, 4332, 1600, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgajf"]
+atlas = ExtResource("12_stonh")
+region = Rect2(0, 7942, 1600, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmnmv"]
+atlas = ExtResource("12_stonh")
+region = Rect2(0, 10108, 1600, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5n6ys"]
+atlas = ExtResource("12_stonh")
+region = Rect2(0, 2166, 1600, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqwgk"]
+atlas = ExtResource("6_imxi8")
+region = Rect2(0, 0, 1600, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2vb5"]
+atlas = ExtResource("6_imxi8")
+region = Rect2(0, 720, 1600, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kk7g"]
+atlas = ExtResource("6_imxi8")
+region = Rect2(0, 1440, 1600, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4ei3"]
+atlas = ExtResource("6_imxi8")
+region = Rect2(0, 2160, 1600, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2occb"]
+atlas = ExtResource("13_ft60n")
+region = Rect2(0, 0, 1600, 724)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvlyv"]
+atlas = ExtResource("13_ft60n")
+region = Rect2(0, 724, 1600, 724)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a3cwx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u81fw")
+}],
+"loop": true,
+"name": &"ShowStage0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hsi46")
+}],
+"loop": true,
+"name": &"ShowStage1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kh7x")
+}],
+"loop": true,
+"name": &"ShowStage2bonnie",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c545q")
+}],
+"loop": true,
+"name": &"ShowStage2chica",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0d30")
+}],
+"loop": false,
+"name": &"ShowStage3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddkkg")
+}],
+"loop": true,
+"name": &"backStage0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kcsj")
+}],
+"loop": true,
+"name": &"backStage1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6wmyc")
+}],
+"loop": true,
+"name": &"backStage2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtxkw")
+}],
+"loop": true,
+"name": &"bathrooms0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbwtl")
+}],
+"loop": true,
+"name": &"bathroomsChica1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obo5p")
+}],
+"loop": true,
+"name": &"bathroomsChica2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23s33")
+}],
+"loop": true,
+"name": &"bathroomsFreddy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8hj0")
+}],
+"loop": true,
+"name": &"diningArea",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kd71f")
+}],
+"loop": true,
+"name": &"diningAreaBonnie1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgw5a")
+}],
+"loop": true,
+"name": &"diningAreaBonnie2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drgj7")
+}],
+"loop": true,
+"name": &"diningAreaChica1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elnda")
+}],
+"loop": true,
+"name": &"diningAreaChica2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_spyxi")
+}],
+"loop": true,
+"name": &"diningAreaFreddy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0ijk")
+}],
+"loop": true,
+"name": &"eastHall0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggdga")
+}],
+"loop": true,
+"name": &"eastHallChica1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_an1qa")
+}],
+"loop": true,
+"name": &"eastHallChica2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_486nk")
+}],
+"loop": true,
+"name": &"eastHallCorner0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgajf")
+}],
+"loop": true,
+"name": &"eastHallCornerChica",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmnmv")
+}],
+"loop": true,
+"name": &"eastHallCornerFreddy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5n6ys")
+}],
+"loop": true,
+"name": &"eastHallFreddy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqwgk")
+}],
+"loop": true,
+"name": &"piratesCove0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2vb5")
+}],
+"loop": true,
+"name": &"piratesCove1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kk7g")
+}],
+"loop": true,
+"name": &"piratesCove2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4ei3")
+}],
+"loop": true,
+"name": &"piratesCove3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2occb")
+}],
+"loop": true,
+"name": &"supplyCloset",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvlyv")
+}],
+"loop": true,
+"name": &"supplyClosetBonnie",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.2,
+"texture": ExtResource("15_xmajc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_u4kp3")
+}, {
+"duration": 0.5,
+"texture": ExtResource("14_u4kp3")
+}, {
+"duration": 0.5,
+"texture": ExtResource("14_u4kp3")
+}],
+"loop": true,
+"name": &"westHall0",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_05t7c")
+}],
+"loop": true,
+"name": &"westHallBonnie",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_j3dqk")
+}],
+"loop": true,
+"name": &"westHallCorner0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_81y0v")
+}],
+"loop": true,
+"name": &"westHallCornerBonnie1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_lhicc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vcgib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7ik8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_pgm3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_uk3qg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_as6n0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_akup1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_66l4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_aam74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_o0dol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_4u3xf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_cg4bg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_0s3r0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_a2hgk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_5epd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_34sus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_0e8fg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_qko53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_4ke2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_jg8a5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_0vp23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dqye6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ehjo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_d3pwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_nh8ic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_gd02v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ha4tc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_fgawp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_5uddy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_kag0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_wcpu1")
+}],
+"loop": false,
+"name": &"westHallFoxy",
+"speed": 40.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fwsc2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_u23h8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_foiuy")
+}],
+"loop": true,
+"name": &"selected",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_foiuy")
+}],
+"loop": true,
+"name": &"unselected",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c364f"]
+line_spacing = -8.0
+font = ExtResource("5_ap3px")
+font_size = 29
+
+[sub_resource type="LabelSettings" id="LabelSettings_g2pu6"]
+font = ExtResource("5_ap3px")
+font_size = 48
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kw35"]
+atlas = ExtResource("2_os1qn")
+region = Rect2(0, 0, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ny00c"]
+atlas = ExtResource("2_os1qn")
+region = Rect2(0, 722, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjw3v"]
+atlas = ExtResource("2_os1qn")
+region = Rect2(0, 1444, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2h2w"]
+atlas = ExtResource("2_os1qn")
+region = Rect2(0, 2166, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlpsi"]
+atlas = ExtResource("2_os1qn")
+region = Rect2(0, 2888, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxgpl"]
+atlas = ExtResource("2_os1qn")
+region = Rect2(0, 3610, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_au2xg"]
+atlas = ExtResource("2_os1qn")
+region = Rect2(0, 4332, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tnnt7"]
+atlas = ExtResource("2_os1qn")
+region = Rect2(0, 5054, 1280, 722)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ih7bw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kw35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ny00c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjw3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2h2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wlpsi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxgpl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_au2xg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tnnt7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_km1s4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_ucgot")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 0.5,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0v1di"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_opp4e")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_832j5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_yrkib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_we7vk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_sfkuh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_tc5yr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_jcgm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_6l02k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_if41a")
+}],
+"loop": false,
+"name": &"effect",
+"speed": 45.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_secg3"]
+line_spacing = -22.0
+font = ExtResource("5_ap3px")
+font_size = 70
+
+[node name="Camera" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 11.0
+offset_right = 14.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_54ui4")
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="CameraChangeSound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("6_qfpp4")
+
+[node name="CameraMovingSound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("7_wgesg")
+volume_db = 1.0
+
+[node name="kitchen1" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("4_0nhmh")
+volume_db = 1.0
+
+[node name="kitchen2" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("5_qtqwa")
+volume_db = 1.0
+
+[node name="kitchen3" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("6_4ojgj")
+volume_db = 1.0
+
+[node name="kitchenFreddy" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("7_32jrm")
+volume_db = 1.0
+
+[node name="blackBG" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -137.0
+offset_top = -39.0
+offset_right = 1214.0
+offset_bottom = 702.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="cameraView" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(-14, -9)
+scale = Vector2(0.72, 0.893499)
+sprite_frames = SubResource("SpriteFrames_a3cwx")
+animation = &"ShowStage3"
+centered = false
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(469, 319)
+zoom = Vector2(1.35, 1.01)
+limit_left = 0
+limit_right = 1140
+limit_smoothed = true
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="CamHUD" type="CanvasLayer" parent="."]
+
+[node name="Map" type="Node" parent="CamHUD"]
+
+[node name="mapBase" type="Sprite2D" parent="CamHUD/Map"]
+position = Vector2(938, 440)
+texture = ExtResource("2_sitx5")
+
+[node name="cam1a" type="AnimatedSprite2D" parent="CamHUD/Map"]
+position = Vector2(868, 280)
+sprite_frames = SubResource("SpriteFrames_fwsc2")
+animation = &"selected"
+autoplay = "selected"
+frame_progress = 0.322452
+
+[node name="Label" type="Label" parent="CamHUD/Map/cam1a"]
+offset_left = -19.0
+offset_top = -17.0
+offset_right = 11.0
+offset_bottom = 23.0
+text = "CAM
+1A"
+label_settings = SubResource("LabelSettings_c364f")
+
+[node name="cam1aBtn" type="Button" parent="CamHUD/Map/cam1a"]
+offset_left = -28.0
+offset_top = -16.0
+offset_right = 27.0
+offset_bottom = 18.0
+focus_mode = 0
+action_mode = 0
+flat = true
+
+[node name="cam1b" type="AnimatedSprite2D" parent="CamHUD/Map"]
+position = Vector2(854, 337)
+sprite_frames = SubResource("SpriteFrames_fwsc2")
+animation = &"unselected"
+autoplay = "unselected"
+
+[node name="Label" type="Label" parent="CamHUD/Map/cam1b"]
+offset_left = -19.0
+offset_top = -17.0
+offset_right = 11.0
+offset_bottom = 23.0
+text = "CAM
+1B"
+label_settings = SubResource("LabelSettings_c364f")
+metadata/_edit_use_anchors_ = true
+
+[node name="cam1bBtn" type="Button" parent="CamHUD/Map/cam1b"]
+offset_left = -28.0
+offset_top = -16.0
+offset_right = 27.0
+offset_bottom = 18.0
+focus_mode = 0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="cam1c" type="AnimatedSprite2D" parent="CamHUD/Map"]
+position = Vector2(821, 416)
+sprite_frames = SubResource("SpriteFrames_fwsc2")
+animation = &"unselected"
+autoplay = "unselected"
+
+[node name="Label" type="Label" parent="CamHUD/Map/cam1c"]
+offset_left = -19.0
+offset_top = -17.0
+offset_right = 11.0
+offset_bottom = 23.0
+text = "CAM
+1C"
+label_settings = SubResource("LabelSettings_c364f")
+metadata/_edit_use_anchors_ = true
+
+[node name="cam1cBtn" type="Button" parent="CamHUD/Map/cam1c"]
+offset_left = -28.0
+offset_top = -16.0
+offset_right = 27.0
+offset_bottom = 18.0
+focus_mode = 0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="cam5" type="AnimatedSprite2D" parent="CamHUD/Map"]
+position = Vector2(748, 363)
+sprite_frames = SubResource("SpriteFrames_fwsc2")
+animation = &"unselected"
+autoplay = "unselected"
+
+[node name="Label" type="Label" parent="CamHUD/Map/cam5"]
+offset_left = -19.0
+offset_top = -17.0
+offset_right = 11.0
+offset_bottom = 23.0
+text = "CAM
+5"
+label_settings = SubResource("LabelSettings_c364f")
+metadata/_edit_use_anchors_ = true
+
+[node name="cam5Btn" type="Button" parent="CamHUD/Map/cam5"]
+offset_left = -28.0
+offset_top = -16.0
+offset_right = 27.0
+offset_bottom = 18.0
+focus_mode = 0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="cam7" type="AnimatedSprite2D" parent="CamHUD/Map"]
+position = Vector2(1087, 366)
+sprite_frames = SubResource("SpriteFrames_fwsc2")
+animation = &"unselected"
+autoplay = "unselected"
+
+[node name="Label" type="Label" parent="CamHUD/Map/cam7"]
+offset_left = -19.0
+offset_top = -17.0
+offset_right = 11.0
+offset_bottom = 23.0
+text = "CAM
+7"
+label_settings = SubResource("LabelSettings_c364f")
+metadata/_edit_use_anchors_ = true
+
+[node name="cam7Btn" type="Button" parent="CamHUD/Map/cam7"]
+offset_left = -28.0
+offset_top = -16.0
+offset_right = 27.0
+offset_bottom = 18.0
+focus_mode = 0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="cam6" type="AnimatedSprite2D" parent="CamHUD/Map"]
+position = Vector2(1072, 497)
+sprite_frames = SubResource("SpriteFrames_fwsc2")
+animation = &"unselected"
+autoplay = "unselected"
+
+[node name="Label" type="Label" parent="CamHUD/Map/cam6"]
+offset_left = -19.0
+offset_top = -17.0
+offset_right = 11.0
+offset_bottom = 23.0
+text = "CAM
+6"
+label_settings = SubResource("LabelSettings_c364f")
+metadata/_edit_use_anchors_ = true
+
+[node name="cam6Btn" type="Button" parent="CamHUD/Map/cam6"]
+offset_left = -28.0
+offset_top = -16.0
+offset_right = 27.0
+offset_bottom = 18.0
+focus_mode = 0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="cam3" type="AnimatedSprite2D" parent="CamHUD/Map"]
+position = Vector2(791, 513)
+sprite_frames = SubResource("SpriteFrames_fwsc2")
+animation = &"unselected"
+autoplay = "unselected"
+
+[node name="Label" type="Label" parent="CamHUD/Map/cam3"]
+offset_left = -19.0
+offset_top = -17.0
+offset_right = 11.0
+offset_bottom = 23.0
+text = "CAM
+3"
+label_settings = SubResource("LabelSettings_c364f")
+metadata/_edit_use_anchors_ = true
+
+[node name="cam3Btn" type="Button" parent="CamHUD/Map/cam3"]
+offset_left = -28.0
+offset_top = -16.0
+offset_right = 27.0
+offset_bottom = 18.0
+focus_mode = 0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="cam2a" type="AnimatedSprite2D" parent="CamHUD/Map"]
+position = Vector2(871, 531)
+sprite_frames = SubResource("SpriteFrames_fwsc2")
+animation = &"unselected"
+autoplay = "unselected"
+
+[node name="Label" type="Label" parent="CamHUD/Map/cam2a"]
+offset_left = -19.0
+offset_top = -17.0
+offset_right = 11.0
+offset_bottom = 23.0
+text = "CAM
+2A"
+label_settings = SubResource("LabelSettings_c364f")
+metadata/_edit_use_anchors_ = true
+
+[node name="cam2aBtn" type="Button" parent="CamHUD/Map/cam2a"]
+offset_left = -28.0
+offset_top = -16.0
+offset_right = 27.0
+offset_bottom = 18.0
+focus_mode = 0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="cam2b" type="AnimatedSprite2D" parent="CamHUD/Map"]
+position = Vector2(871, 572)
+sprite_frames = SubResource("SpriteFrames_fwsc2")
+animation = &"selected"
+autoplay = "unselected"
+
+[node name="Label" type="Label" parent="CamHUD/Map/cam2b"]
+offset_left = -19.0
+offset_top = -17.0
+offset_right = 11.0
+offset_bottom = 23.0
+text = "CAM
+2B"
+label_settings = SubResource("LabelSettings_c364f")
+metadata/_edit_use_anchors_ = true
+
+[node name="cam2bBtn" type="Button" parent="CamHUD/Map/cam2b"]
+offset_left = -28.0
+offset_top = -16.0
+offset_right = 27.0
+offset_bottom = 18.0
+focus_mode = 0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="cam4a" type="AnimatedSprite2D" parent="CamHUD/Map"]
+position = Vector2(979, 530)
+sprite_frames = SubResource("SpriteFrames_fwsc2")
+animation = &"unselected"
+autoplay = "unselected"
+
+[node name="Label" type="Label" parent="CamHUD/Map/cam4a"]
+offset_left = -19.0
+offset_top = -17.0
+offset_right = 11.0
+offset_bottom = 23.0
+text = "CAM
+4A"
+label_settings = SubResource("LabelSettings_c364f")
+metadata/_edit_use_anchors_ = true
+
+[node name="cam4aBtn" type="Button" parent="CamHUD/Map/cam4a"]
+offset_left = -28.0
+offset_top = -16.0
+offset_right = 27.0
+offset_bottom = 18.0
+focus_mode = 0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="cam4b" type="AnimatedSprite2D" parent="CamHUD/Map"]
+position = Vector2(979, 571)
+sprite_frames = SubResource("SpriteFrames_fwsc2")
+animation = &"unselected"
+autoplay = "unselected"
+
+[node name="Label" type="Label" parent="CamHUD/Map/cam4b"]
+offset_left = -19.0
+offset_top = -17.0
+offset_right = 11.0
+offset_bottom = 23.0
+text = "CAM
+4B"
+label_settings = SubResource("LabelSettings_c364f")
+metadata/_edit_use_anchors_ = true
+
+[node name="cam4bBtn" type="Button" parent="CamHUD/Map/cam4b"]
+offset_left = -28.0
+offset_top = -16.0
+offset_right = 27.0
+offset_bottom = 18.0
+focus_mode = 0
+action_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="localName" type="Label" parent="CamHUD/Map"]
+offset_left = 747.0
+offset_top = 217.0
+offset_right = 914.0
+offset_bottom = 256.0
+text = "Show  Stage"
+label_settings = SubResource("LabelSettings_g2pu6")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="static" type="AnimatedSprite2D" parent="CamHUD"]
+modulate = Color(1, 1, 1, 0.129412)
+position = Vector2(575, 320)
+scale = Vector2(0.975, 1.03601)
+sprite_frames = SubResource("SpriteFrames_ih7bw")
+autoplay = "default"
+
+[node name="recording" type="AnimatedSprite2D" parent="CamHUD"]
+position = Vector2(64, 64)
+sprite_frames = SubResource("SpriteFrames_km1s4")
+autoplay = "default"
+frame_progress = 0.891673
+
+[node name="border" type="ReferenceRect" parent="CamHUD"]
+offset_left = 11.0
+offset_top = 8.0
+offset_right = 51.0
+offset_bottom = 48.0
+scale = Vector2(28, 15.68)
+mouse_filter = 2
+border_color = Color(1, 1, 1, 1)
+border_width = 0.1
+editor_only = false
+
+[node name="cameraEffect" type="AnimatedSprite2D" parent="CamHUD"]
+visible = false
+position = Vector2(568, 326.5)
+scale = Vector2(0.8875, 0.898611)
+sprite_frames = SubResource("SpriteFrames_0v1di")
+animation = &"effect"
+
+[node name="kitchenLabel" type="Label" parent="CamHUD"]
+visible = false
+offset_left = 325.0
+offset_top = 46.0
+offset_right = 787.0
+offset_bottom = 161.0
+text = "-CAMERA  DISABLED-
+ AUDIO  ONLY"
+label_settings = SubResource("LabelSettings_secg3")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="CamHUD/Map/cam1a/cam1aBtn" to="." method="_on_cam_1a_btn_pressed"]
+[connection signal="pressed" from="CamHUD/Map/cam1b/cam1bBtn" to="." method="_on_cam_1b_btn_pressed"]
+[connection signal="pressed" from="CamHUD/Map/cam1c/cam1cBtn" to="." method="_on_cam_1c_btn_pressed"]
+[connection signal="pressed" from="CamHUD/Map/cam5/cam5Btn" to="." method="_on_cam_5_btn_pressed"]
+[connection signal="pressed" from="CamHUD/Map/cam7/cam7Btn" to="." method="_on_cam_7_btn_pressed"]
+[connection signal="pressed" from="CamHUD/Map/cam6/cam6Btn" to="." method="_on_cam_6_btn_pressed"]
+[connection signal="pressed" from="CamHUD/Map/cam3/cam3Btn" to="." method="_on_cam_3_btn_pressed"]
+[connection signal="pressed" from="CamHUD/Map/cam2a/cam2aBtn" to="." method="_on_cam_2a_btn_pressed"]
+[connection signal="pressed" from="CamHUD/Map/cam2b/cam2bBtn" to="." method="_on_cam_2b_btn_pressed"]
+[connection signal="pressed" from="CamHUD/Map/cam4a/cam4aBtn" to="." method="_on_cam_4a_btn_pressed"]
+[connection signal="pressed" from="CamHUD/Map/cam4b/cam4bBtn" to="." method="_on_cam_4b_btn_pressed"]
+[connection signal="animation_finished" from="CamHUD/cameraEffect" to="." method="_on_camera_effect_animation_finished"]

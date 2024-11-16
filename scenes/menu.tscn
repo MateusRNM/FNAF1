@@ -1,0 +1,303 @@
+[gd_scene load_steps=24 format=3 uid="uid://bihfq71g4g3se"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_3wqwf"]
+[ext_resource type="Texture2D" uid="uid://06625pb2hnou" path="res://assets/sprites/PC Computer - Five Nights at Freddys - Main Menu Intro & Endings.png" id="1_aqgym"]
+[ext_resource type="Texture2D" uid="uid://cj6vuws0eufit" path="res://assets/sprites/PC Computer - Five Nights at Freddys - Static.png" id="2_me76g"]
+[ext_resource type="FontFile" uid="uid://4c8yafmumuau" path="res://assets/fonts/CONSOLA.TTF" id="3_q3apc"]
+[ext_resource type="AudioStream" uid="uid://c48xu8p3pnq7d" path="res://assets/audios/menuMusic.wav" id="5_cg711"]
+[ext_resource type="AudioStream" uid="uid://dmkli7pckkslt" path="res://assets/audios/buttonSoundsMenu.wav" id="6_3pcl5"]
+[ext_resource type="Texture2D" uid="uid://vqwi4c8keyiq" path="res://assets/sprites/Star.png" id="7_r8ib8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ra4i1"]
+atlas = ExtResource("1_aqgym")
+region = Rect2(0, 0, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3kuq"]
+atlas = ExtResource("1_aqgym")
+region = Rect2(0, 722, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tagt0"]
+atlas = ExtResource("1_aqgym")
+region = Rect2(0, 1444, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u715x"]
+atlas = ExtResource("1_aqgym")
+region = Rect2(0, 2166, 1280, 722)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m5kxi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ra4i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ra4i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ra4i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ra4i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ra4i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ra4i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ra4i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ra4i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ra4i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ra4i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ra4i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3kuq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tagt0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u715x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kw35"]
+atlas = ExtResource("2_me76g")
+region = Rect2(0, 0, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ny00c"]
+atlas = ExtResource("2_me76g")
+region = Rect2(0, 722, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjw3v"]
+atlas = ExtResource("2_me76g")
+region = Rect2(0, 1444, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2h2w"]
+atlas = ExtResource("2_me76g")
+region = Rect2(0, 2166, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlpsi"]
+atlas = ExtResource("2_me76g")
+region = Rect2(0, 2888, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxgpl"]
+atlas = ExtResource("2_me76g")
+region = Rect2(0, 3610, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_au2xg"]
+atlas = ExtResource("2_me76g")
+region = Rect2(0, 4332, 1280, 722)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tnnt7"]
+atlas = ExtResource("2_me76g")
+region = Rect2(0, 5054, 1280, 722)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_amtv5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kw35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ny00c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjw3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2h2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wlpsi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxgpl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_au2xg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tnnt7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_43dso"]
+font = ExtResource("3_q3apc")
+font_size = 38
+
+[sub_resource type="LabelSettings" id="LabelSettings_a3ldg"]
+font = ExtResource("3_q3apc")
+font_size = 25
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_3wqwf")
+
+[node name="freddy" type="AnimatedSprite2D" parent="."]
+position = Vector2(578, 329)
+scale = Vector2(0.90625, 0.919668)
+sprite_frames = SubResource("SpriteFrames_m5kxi")
+autoplay = "default"
+frame_progress = 0.00675767
+
+[node name="static" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.427451)
+position = Vector2(580, 319)
+scale = Vector2(0.975, 1.03601)
+sprite_frames = SubResource("SpriteFrames_amtv5")
+autoplay = "default"
+frame_progress = 0.644541
+
+[node name="title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 48.0
+offset_right = 318.0
+offset_bottom = 237.0
+text = "Five
+Nights
+at
+Freddy's"
+label_settings = SubResource("LabelSettings_43dso")
+
+[node name="newGameBTn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 291.0
+offset_right = 275.0
+offset_bottom = 332.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("3_q3apc")
+theme_override_font_sizes/font_size = 32
+action_mode = 0
+text = "   New Game"
+flat = true
+
+[node name="continueBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 335.0
+offset_right = 276.0
+offset_bottom = 376.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("3_q3apc")
+theme_override_font_sizes/font_size = 32
+action_mode = 0
+text = "   Continue"
+flat = true
+
+[node name="night6Btn" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 68.0
+offset_top = 398.0
+offset_right = 292.0
+offset_bottom = 439.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("3_q3apc")
+theme_override_font_sizes/font_size = 32
+action_mode = 0
+text = "   6th Night"
+flat = true
+
+[node name="customNight" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 67.0
+offset_top = 438.0
+offset_right = 345.0
+offset_bottom = 479.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("3_q3apc")
+theme_override_font_sizes/font_size = 32
+action_mode = 0
+text = "   Custom Night"
+flat = true
+
+[node name="nightContinue" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 168.0
+offset_top = 373.0
+offset_right = 315.0
+offset_bottom = 412.0
+text = "Night"
+label_settings = SubResource("LabelSettings_a3ldg")
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_cg711")
+autoplay = true
+
+[node name="buttonSounds" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_3pcl5")
+volume_db = -10.215
+
+[node name="Star1" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 125.0
+offset_top = 218.0
+offset_right = 176.0
+offset_bottom = 271.0
+texture = ExtResource("7_r8ib8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Star2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 184.0
+offset_top = 218.0
+offset_right = 235.0
+offset_bottom = 271.0
+texture = ExtResource("7_r8ib8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Star3" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 243.0
+offset_top = 218.0
+offset_right = 294.0
+offset_bottom = 271.0
+texture = ExtResource("7_r8ib8")
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="mouse_entered" from="newGameBTn" to="." method="_on_new_game_b_tn_mouse_entered"]
+[connection signal="mouse_exited" from="newGameBTn" to="." method="_on_new_game_b_tn_mouse_exited"]
+[connection signal="pressed" from="newGameBTn" to="." method="_on_new_game_b_tn_pressed"]
+[connection signal="mouse_entered" from="continueBtn" to="." method="_on_continue_btn_mouse_entered"]
+[connection signal="mouse_exited" from="continueBtn" to="." method="_on_continue_btn_mouse_exited"]
+[connection signal="pressed" from="continueBtn" to="." method="_on_continue_btn_pressed"]
+[connection signal="mouse_entered" from="night6Btn" to="." method="_on_night_6_btn_mouse_entered"]
+[connection signal="mouse_exited" from="night6Btn" to="." method="_on_night_6_btn_mouse_exited"]
+[connection signal="pressed" from="night6Btn" to="." method="_on_night_6_btn_pressed"]
+[connection signal="mouse_entered" from="customNight" to="." method="_on_custom_night_mouse_entered"]
+[connection signal="mouse_exited" from="customNight" to="." method="_on_custom_night_mouse_exited"]
+[connection signal="pressed" from="customNight" to="." method="_on_custom_night_pressed"]
+[connection signal="finished" from="music" to="." method="_on_music_finished"]

@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://bbxa3f4vjp0bk"]
+
+[ext_resource type="Texture2D" uid="uid://bcsg2yqydbjpt" path="res://assets/sprites/endings/night5.png" id="1_3kln7"]
+[ext_resource type="Script" path="res://scripts/WinScreen.gd" id="1_bs4js"]
+[ext_resource type="Texture2D" uid="uid://dyakglxhmhhu0" path="res://assets/sprites/endings/night6.png" id="2_s5f4d"]
+[ext_resource type="Texture2D" uid="uid://bwd2spa43ilpu" path="res://assets/sprites/endings/night7.png" id="3_mim3c"]
+[ext_resource type="AudioStream" uid="uid://bvf23isrh4hii" path="res://assets/audios/room/music box.wav" id="5_h200m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s72rm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3kln7")
+}],
+"loop": false,
+"name": &"night5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_s5f4d")
+}],
+"loop": false,
+"name": &"night6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mim3c")
+}],
+"loop": false,
+"name": &"night7",
+"speed": 5.0
+}]
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bs4js")
+
+[node name="background" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.2, 0.2, 0.2, 1)
+position = Vector2(574.5, 323.5)
+scale = Vector2(0.897656, 0.901389)
+sprite_frames = SubResource("SpriteFrames_s72rm")
+animation = &"night5"
+
+[node name="Audio6thNight" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_h200m")

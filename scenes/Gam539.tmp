@@ -1,0 +1,469 @@
+[gd_scene load_steps=44 format=3 uid="uid://qjaiuwkac2ie"]
+
+[ext_resource type="Script" path="res://scripts/Game.gd" id="1_gol1d"]
+[ext_resource type="Texture2D" uid="uid://ytj1e4okdegf" path="res://assets/sprites/room sprites/room/noLight.png" id="2_635ne"]
+[ext_resource type="Texture2D" uid="uid://b5ct4r2y3bdra" path="res://assets/sprites/room sprites/room/lightLeft.png" id="2_n7vtl"]
+[ext_resource type="Texture2D" uid="uid://c2niubond8eux" path="res://assets/sprites/room sprites/room/lightRight.png" id="3_533ci"]
+[ext_resource type="Texture2D" uid="uid://ca57ooh4ulw0j" path="res://assets/sprites/room sprites/fan/57.png" id="3_hqpm4"]
+[ext_resource type="Texture2D" uid="uid://djc7v6xkomf7j" path="res://assets/sprites/room sprites/fan/59.png" id="4_iit3q"]
+[ext_resource type="Texture2D" uid="uid://crvc2iicbwcak" path="res://assets/sprites/room sprites/fan/60.png" id="5_7mlyu"]
+[ext_resource type="Texture2D" uid="uid://cydcl1153rgwj" path="res://assets/sprites/room sprites/buttons/PC Computer - Five Nights at Freddys - Buttons.png" id="6_w1ukx"]
+[ext_resource type="AudioStream" uid="uid://bfacf15qvbth0" path="res://assets/audios/room/posterSound.wav" id="7_23myj"]
+[ext_resource type="Texture2D" uid="uid://bidgvjrlbfeuh" path="res://assets/sprites/room sprites/doors/88.png" id="7_fteid"]
+[ext_resource type="Texture2D" uid="uid://t2xchq4uaplq" path="res://assets/sprites/room sprites/doors/102.png" id="7_ohkfp"]
+[ext_resource type="AudioStream" uid="uid://b2oxox63odjft" path="res://assets/audios/room/ambientSound.wav" id="8_j58n2"]
+[ext_resource type="AudioStream" uid="uid://cddqn2rrqejwi" path="res://assets/audios/room/doorSound.wav" id="9_6sanp"]
+[ext_resource type="Texture2D" uid="uid://n8e0yaihc2gl" path="res://assets/sprites/room sprites/doors/89.png" id="9_70icx"]
+[ext_resource type="Texture2D" uid="uid://do2wxiuchlwos" path="res://assets/sprites/room sprites/doors/91.png" id="10_s3u63"]
+[ext_resource type="Texture2D" uid="uid://4hgbaa0241gw" path="res://assets/sprites/room sprites/doors/92.png" id="11_jyvmh"]
+[ext_resource type="Texture2D" uid="uid://cjvejg6qnj2d5" path="res://assets/sprites/room sprites/doors/93.png" id="12_brjat"]
+[ext_resource type="Texture2D" uid="uid://1fqbk287t1yf" path="res://assets/sprites/room sprites/doors/94.png" id="13_sie85"]
+[ext_resource type="Texture2D" uid="uid://c7sdka60c6wf1" path="res://assets/sprites/room sprites/doors/95.png" id="14_srq3m"]
+[ext_resource type="Texture2D" uid="uid://dvmbd705ruj7e" path="res://assets/sprites/room sprites/doors/96.png" id="15_krn30"]
+[ext_resource type="Texture2D" uid="uid://so57ugoos3yo" path="res://assets/sprites/room sprites/doors/97.png" id="16_whgdy"]
+[ext_resource type="Texture2D" uid="uid://cn3oabl5yp6j" path="res://assets/sprites/room sprites/doors/98.png" id="17_526bc"]
+[ext_resource type="Texture2D" uid="uid://b0n2r4hipe4qt" path="res://assets/sprites/room sprites/doors/99.png" id="18_8mldc"]
+[ext_resource type="Texture2D" uid="uid://dxwytvksosd33" path="res://assets/sprites/room sprites/doors/100.png" id="19_64xgv"]
+[ext_resource type="Texture2D" uid="uid://p4npa6w3iviw" path="res://assets/sprites/room sprites/doors/101.png" id="20_mvlah"]
+[ext_resource type="FontFile" uid="uid://l5jvrdla0r7m" path="res://assets/fonts/pixeledFont.otf" id="21_kamqf"]
+[ext_resource type="Texture2D" uid="uid://barmioht3y3lg" path="res://assets/sprites/room sprites/hud/cameraButton.png" id="27_a3c6l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n0bi6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_n7vtl")
+}],
+"loop": false,
+"name": &"lightLeft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_533ci")
+}],
+"loop": false,
+"name": &"lightRight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_635ne")
+}],
+"loop": false,
+"name": &"noLight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4fwb1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hqpm4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_iit3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7mlyu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 25.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5aid"]
+atlas = ExtResource("6_w1ukx")
+region = Rect2(194, 0, 97, 253)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5c2en"]
+atlas = ExtResource("6_w1ukx")
+region = Rect2(291, 0, 97, 253)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ts51"]
+atlas = ExtResource("6_w1ukx")
+region = Rect2(0, 0, 97, 253)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elcu2"]
+atlas = ExtResource("6_w1ukx")
+region = Rect2(97, 0, 97, 253)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ghq6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5aid")
+}],
+"loop": true,
+"name": &"closeOff",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5c2en")
+}],
+"loop": true,
+"name": &"closeOn",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ts51")
+}],
+"loop": true,
+"name": &"openOff",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elcu2")
+}],
+"loop": true,
+"name": &"openOn",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_faaax"]
+atlas = ExtResource("6_w1ukx")
+region = Rect2(194, 253, 97, 253)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eia04"]
+atlas = ExtResource("6_w1ukx")
+region = Rect2(291, 253, 97, 253)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyuyv"]
+atlas = ExtResource("6_w1ukx")
+region = Rect2(0, 253, 97, 253)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygass"]
+atlas = ExtResource("6_w1ukx")
+region = Rect2(97, 253, 97, 253)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_20cv0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_faaax")
+}],
+"loop": true,
+"name": &"closeOff",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eia04")
+}],
+"loop": true,
+"name": &"closeOn",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fyuyv")
+}],
+"loop": true,
+"name": &"openOff",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygass")
+}],
+"loop": true,
+"name": &"openOn",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0fvx8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ohkfp")
+}],
+"loop": false,
+"name": &"close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_fteid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_70icx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_s3u63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jyvmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_brjat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_sie85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_srq3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_krn30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_whgdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_526bc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8mldc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_64xgv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_mvlah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ohkfp")
+}],
+"loop": false,
+"name": &"closing",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_fteid")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ohkfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_mvlah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_64xgv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8mldc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_526bc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_whgdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_krn30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_srq3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_sie85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_brjat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jyvmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_s3u63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_70icx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fteid")
+}],
+"loop": false,
+"name": &"opening",
+"speed": 20.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_73ps5"]
+font = ExtResource("21_kamqf")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_3htnx"]
+line_spacing = -5.0
+font = ExtResource("21_kamqf")
+font_size = 51
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7itk"]
+size = Vector2(509, 38)
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gol1d")
+
+[node name="room" type="AnimatedSprite2D" parent="."]
+position = Vector2(570, 321.5)
+scale = Vector2(0.7275, 0.926389)
+sprite_frames = SubResource("SpriteFrames_n0bi6")
+animation = &"noLight"
+autoplay = "noLight"
+
+[node name="poster" type="Button" parent="room"]
+offset_left = -128.0
+offset_top = -125.0
+offset_right = -115.0
+offset_bottom = -117.0
+focus_mode = 0
+action_mode = 0
+flat = true
+
+[node name="fan" type="AnimatedSprite2D" parent="."]
+position = Vector2(605, 360)
+scale = Vector2(0.719957, 0.928571)
+sprite_frames = SubResource("SpriteFrames_4fwb1")
+autoplay = "default"
+frame_progress = 0.832923
+
+[node name="buttonsLeft" type="AnimatedSprite2D" parent="."]
+position = Vector2(26.375, 336.625)
+scale = Vector2(0.688144, 0.961462)
+sprite_frames = SubResource("SpriteFrames_5ghq6")
+animation = &"openOff"
+autoplay = "openOff"
+
+[node name="doorBtnLeft" type="Button" parent="buttonsLeft"]
+offset_left = -12.0
+offset_top = -69.0
+offset_right = 24.0
+offset_bottom = -18.0
+focus_mode = 0
+action_mode = 0
+flat = true
+
+[node name="lightBtnLeft" type="Button" parent="buttonsLeft"]
+offset_left = -12.0
+offset_top = 10.0
+offset_right = 24.0
+offset_bottom = 61.0
+focus_mode = 0
+action_mode = 0
+flat = true
+
+[node name="buttonsRight" type="AnimatedSprite2D" parent="."]
+position = Vector2(1100, 336.625)
+scale = Vector2(0.688144, 0.961462)
+sprite_frames = SubResource("SpriteFrames_20cv0")
+animation = &"openOff"
+autoplay = "openOff"
+
+[node name="doorBtnRight" type="Button" parent="buttonsRight"]
+offset_left = -20.3446
+offset_top = -70.3356
+offset_right = 15.6554
+offset_bottom = -19.3356
+focus_mode = 0
+action_mode = 0
+flat = true
+
+[node name="lightBtnRight" type="Button" parent="buttonsRight"]
+offset_left = -20.3446
+offset_top = 8.66444
+offset_right = 15.6554
+offset_bottom = 59.6644
+focus_mode = 0
+action_mode = 0
+flat = true
+
+[node name="doorLeft" type="AnimatedSprite2D" parent="."]
+position = Vector2(141, 324)
+scale = Vector2(0.720852, 0.891667)
+sprite_frames = SubResource("SpriteFrames_0fvx8")
+animation = &"close"
+autoplay = "open"
+
+[node name="doorRight" type="AnimatedSprite2D" parent="."]
+position = Vector2(1000, 324)
+scale = Vector2(0.720852, 0.891667)
+sprite_frames = SubResource("SpriteFrames_0fvx8")
+animation = &"open"
+autoplay = "open"
+flip_h = true
+
+[node name="PlayerCamera" type="Camera2D" parent="."]
+position = Vector2(428, 326)
+zoom = Vector2(1.35, 1.01)
+limit_left = 0
+limit_right = 1140
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="posterSound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("7_23myj")
+
+[node name="ambientSound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("8_j58n2")
+autoplay = true
+
+[node name="doorSound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("9_6sanp")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="nightLabel" type="Label" parent="HUD"]
+anchors_preset = -1
+anchor_left = 0.240451
+anchor_right = 0.240451
+offset_left = 732.0
+offset_top = 39.0
+offset_right = 851.0
+offset_bottom = 72.0
+grow_horizontal = 0
+text = "Night 1
+"
+label_settings = SubResource("LabelSettings_73ps5")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="timeLabel" type="Label" parent="HUD"]
+anchors_preset = -1
+anchor_left = 0.240451
+anchor_right = 0.240451
+offset_left = 738.0
+offset_top = 11.0
+offset_right = 857.0
+offset_bottom = 53.0
+grow_horizontal = 0
+text = "12 AM
+"
+label_settings = SubResource("LabelSettings_3htnx")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="cameraBtn" type="Area2D" parent="HUD"]
+position = Vector2(-14, -1)
+disable_mode = 2
+
+[node name="shape" type="CollisionShape2D" parent="HUD/cameraBtn"]
+position = Vector2(593.5, 609)
+shape = SubResource("RectangleShape2D_j7itk")
+
+[node name="sprite" type="Sprite2D" parent="HUD/cameraBtn"]
+position = Vector2(594, 609.25)
+scale = Vector2(0.863333, 1.00833)
+texture = ExtResource("27_a3c6l")
+
+[connection signal="pressed" from="room/poster" to="." method="_on_poster_pressed"]
+[connection signal="pressed" from="buttonsLeft/doorBtnLeft" to="." method="_on_door_btn_left_pressed"]
+[connection signal="pressed" from="buttonsLeft/lightBtnLeft" to="." method="_on_light_btn_left_pressed"]
+[connection signal="pressed" from="buttonsRight/doorBtnRight" to="." method="_on_door_btn_right_pressed"]
+[connection signal="pressed" from="buttonsRight/lightBtnRight" to="." method="_on_light_btn_right_pressed"]
+[connection signal="finished" from="Sounds/ambientSound" to="." method="_on_ambient_sound_finished"]

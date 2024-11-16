@@ -1,0 +1,124 @@
+[gd_scene load_steps=16 format=3 uid="uid://ckdn7bnlivpi5"]
+
+[ext_resource type="Script" path="res://scripts/NightInfo.gd" id="1_3a4j3"]
+[ext_resource type="Texture2D" uid="uid://lbs4oftv5m71" path="res://assets/sprites/PC Computer - Five Nights at Freddys - Camera Effects.png" id="1_l17ro"]
+[ext_resource type="FontFile" uid="uid://l5jvrdla0r7m" path="res://assets/fonts/pixeledFont.otf" id="3_f16ji"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mygfe"]
+font = ExtResource("3_f16ji")
+font_size = 70
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p76on"]
+atlas = ExtResource("1_l17ro")
+region = Rect2(0, 0, 1280, 1227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awof8"]
+atlas = ExtResource("1_l17ro")
+region = Rect2(0, 1227, 1280, 1227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qst6y"]
+atlas = ExtResource("1_l17ro")
+region = Rect2(0, 2454, 1280, 1227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlf8y"]
+atlas = ExtResource("1_l17ro")
+region = Rect2(0, 3681, 1280, 1227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uirro"]
+atlas = ExtResource("1_l17ro")
+region = Rect2(0, 4908, 1280, 1227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3np7"]
+atlas = ExtResource("1_l17ro")
+region = Rect2(0, 6135, 1280, 1227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_woqyw"]
+atlas = ExtResource("1_l17ro")
+region = Rect2(0, 7362, 1280, 1227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_it7b7"]
+atlas = ExtResource("1_l17ro")
+region = Rect2(0, 8589, 1280, 1227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6k2e"]
+atlas = ExtResource("1_l17ro")
+region = Rect2(0, 9816, 1280, 1227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exfnw"]
+atlas = ExtResource("1_l17ro")
+region = Rect2(0, 11043, 1280, 1227)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4vpwk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p76on")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awof8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qst6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mlf8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uirro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3np7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_woqyw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_it7b7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6k2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exfnw")
+}],
+"loop": false,
+"name": &"default",
+"speed": 27.0
+}]
+
+[node name="NightInfo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_3a4j3")
+
+[node name="background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1168.0
+offset_bottom = 671.0
+color = Color(0, 0, 0, 1)
+
+[node name="infos" type="Label" parent="."]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 250.0
+offset_right = 920.0
+offset_bottom = 439.0
+text = "12:00  AM
+"
+label_settings = SubResource("LabelSettings_mygfe")
+horizontal_alignment = 1
+
+[node name="cameraEffect" type="AnimatedSprite2D" parent="."]
+position = Vector2(576.5, 326.75)
+scale = Vector2(0.897656, 0.523635)
+sprite_frames = SubResource("SpriteFrames_4vpwk")
+autoplay = "default"
+frame = 9
+frame_progress = 1.0
+
+[connection signal="animation_finished" from="cameraEffect" to="." method="_on_camera_effect_animation_finished"]

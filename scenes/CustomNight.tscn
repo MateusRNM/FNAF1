@@ -1,0 +1,342 @@
+[gd_scene load_steps=13 format=3 uid="uid://sejhde6n0n8n"]
+
+[ext_resource type="Script" path="res://scripts/CustomNight.gd" id="1_p8c71"]
+[ext_resource type="FontFile" uid="uid://4c8yafmumuau" path="res://assets/fonts/CONSOLA.TTF" id="2_fccs5"]
+[ext_resource type="Texture2D" uid="uid://drrh1uw825rgh" path="res://assets/sprites/custom night/freddy.png" id="3_qse6m"]
+[ext_resource type="Texture2D" uid="uid://c0do6sq3oij3u" path="res://assets/sprites/custom night/bonnie.png" id="4_18tny"]
+[ext_resource type="Texture2D" uid="uid://bptq0qqj2ee6o" path="res://assets/sprites/custom night/chica.png" id="5_6dnl8"]
+[ext_resource type="Texture2D" uid="uid://bo4bu3us1g3qu" path="res://assets/sprites/custom night/foxy.png" id="6_ehk87"]
+[ext_resource type="Texture2D" uid="uid://cna2rfk2xdm3y" path="res://assets/sprites/custom night/plus.png" id="7_5mlbd"]
+[ext_resource type="Texture2D" uid="uid://d2xql3m4ypja2" path="res://assets/sprites/custom night/minus.png" id="8_risxq"]
+[ext_resource type="Texture2D" uid="uid://do8fc7beevui2" path="res://assets/sprites/custom night/ready.png" id="9_e4iwt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nskwt"]
+font = ExtResource("2_fccs5")
+font_size = 38
+
+[sub_resource type="LabelSettings" id="LabelSettings_igfcu"]
+font = ExtResource("2_fccs5")
+font_size = 27
+
+[sub_resource type="LabelSettings" id="LabelSettings_a13bp"]
+font = ExtResource("2_fccs5")
+font_size = 46
+
+[node name="CustomNight" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p8c71")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 650.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="title" type="Label" parent="."]
+offset_left = 260.0
+offset_top = 112.0
+offset_right = 953.0
+offset_bottom = 277.0
+text = "       Customize Night
+
+Freddy    Bonnie    Chica    Foxy"
+label_settings = SubResource("LabelSettings_nskwt")
+
+[node name="iaLvl" type="Label" parent="."]
+offset_left = 250.0
+offset_top = 399.0
+offset_right = 985.0
+offset_bottom = 564.0
+text = "A.I. Level   A.I. Level    A.I. Level  A.I. Level"
+label_settings = SubResource("LabelSettings_igfcu")
+
+[node name="infos" type="Label" parent="."]
+offset_left = 222.0
+offset_top = 600.0
+offset_right = 915.0
+offset_bottom = 628.0
+text = "(0-2)easy  (3-6)med  (7-12)hard (12+)extreme"
+label_settings = SubResource("LabelSettings_igfcu")
+
+[node name="image1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 251.0
+offset_top = 247.0
+offset_right = 393.0
+offset_bottom = 390.0
+texture = ExtResource("3_qse6m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="image2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 247.0
+offset_right = 592.0
+offset_bottom = 390.0
+texture = ExtResource("4_18tny")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="image3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 653.0
+offset_top = 247.0
+offset_right = 795.0
+offset_bottom = 390.0
+texture = ExtResource("5_6dnl8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="image4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 841.0
+offset_top = 247.0
+offset_right = 983.0
+offset_bottom = 390.0
+texture = ExtResource("6_ehk87")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Buttons" type="Node" parent="."]
+
+[node name="plus" type="TextureRect" parent="Buttons"]
+offset_left = 364.0
+offset_top = 428.0
+offset_right = 404.0
+offset_bottom = 480.0
+texture = ExtResource("7_5mlbd")
+
+[node name="minus" type="TextureRect" parent="Buttons"]
+offset_left = 248.0
+offset_top = 428.0
+offset_right = 288.0
+offset_bottom = 480.0
+texture = ExtResource("8_risxq")
+
+[node name="freddyPlusBtn" type="Button" parent="Buttons"]
+anchors_preset = -1
+anchor_right = 0.02
+anchor_bottom = 0.025
+offset_left = 365.0
+offset_top = 427.0
+offset_right = 380.96
+offset_bottom = 462.8
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_fccs5")
+theme_override_font_sizes/font_size = 27
+action_mode = 0
+flat = true
+
+[node name="freddyMinusBtn" type="Button" parent="Buttons"]
+anchors_preset = -1
+anchor_right = 0.02
+anchor_bottom = 0.025
+offset_left = 249.0
+offset_top = 428.0
+offset_right = 264.96
+offset_bottom = 462.8
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_fccs5")
+theme_override_font_sizes/font_size = 27
+action_mode = 0
+flat = true
+
+[node name="freddyLabel" type="Label" parent="Buttons"]
+offset_left = 315.0
+offset_top = 432.0
+offset_right = 355.0
+offset_bottom = 483.0
+text = "0"
+label_settings = SubResource("LabelSettings_a13bp")
+horizontal_alignment = 2
+
+[node name="plus2" type="TextureRect" parent="Buttons"]
+offset_left = 557.0
+offset_top = 429.0
+offset_right = 597.0
+offset_bottom = 481.0
+texture = ExtResource("7_5mlbd")
+
+[node name="minus2" type="TextureRect" parent="Buttons"]
+offset_left = 441.0
+offset_top = 429.0
+offset_right = 481.0
+offset_bottom = 481.0
+texture = ExtResource("8_risxq")
+
+[node name="bonniePlusBtn" type="Button" parent="Buttons"]
+anchors_preset = -1
+anchor_right = 0.02
+anchor_bottom = 0.025
+offset_left = 558.0
+offset_top = 428.0
+offset_right = 573.96
+offset_bottom = 463.8
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_fccs5")
+theme_override_font_sizes/font_size = 27
+action_mode = 0
+flat = true
+
+[node name="bonnieMinusBtn" type="Button" parent="Buttons"]
+anchors_preset = -1
+anchor_right = 0.02
+anchor_bottom = 0.025
+offset_left = 442.0
+offset_top = 429.0
+offset_right = 457.96
+offset_bottom = 463.8
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_fccs5")
+theme_override_font_sizes/font_size = 27
+action_mode = 0
+flat = true
+
+[node name="bonnieLabel" type="Label" parent="Buttons"]
+offset_left = 508.0
+offset_top = 433.0
+offset_right = 548.0
+offset_bottom = 484.0
+text = "0"
+label_settings = SubResource("LabelSettings_a13bp")
+horizontal_alignment = 2
+
+[node name="plus3" type="TextureRect" parent="Buttons"]
+offset_left = 767.0
+offset_top = 429.0
+offset_right = 807.0
+offset_bottom = 481.0
+texture = ExtResource("7_5mlbd")
+
+[node name="minus3" type="TextureRect" parent="Buttons"]
+offset_left = 651.0
+offset_top = 429.0
+offset_right = 691.0
+offset_bottom = 481.0
+texture = ExtResource("8_risxq")
+
+[node name="chicaPlusBtn" type="Button" parent="Buttons"]
+anchors_preset = -1
+anchor_right = 0.02
+anchor_bottom = 0.025
+offset_left = 768.0
+offset_top = 428.0
+offset_right = 783.96
+offset_bottom = 463.8
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_fccs5")
+theme_override_font_sizes/font_size = 27
+action_mode = 0
+flat = true
+
+[node name="chicaMinusBtn" type="Button" parent="Buttons"]
+anchors_preset = -1
+anchor_right = 0.02
+anchor_bottom = 0.025
+offset_left = 652.0
+offset_top = 429.0
+offset_right = 667.96
+offset_bottom = 463.8
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_fccs5")
+theme_override_font_sizes/font_size = 27
+action_mode = 0
+flat = true
+
+[node name="chicaLabel" type="Label" parent="Buttons"]
+offset_left = 718.0
+offset_top = 433.0
+offset_right = 758.0
+offset_bottom = 484.0
+text = "0"
+label_settings = SubResource("LabelSettings_a13bp")
+horizontal_alignment = 2
+
+[node name="plus4" type="TextureRect" parent="Buttons"]
+offset_left = 949.0
+offset_top = 428.0
+offset_right = 989.0
+offset_bottom = 480.0
+texture = ExtResource("7_5mlbd")
+
+[node name="minus4" type="TextureRect" parent="Buttons"]
+offset_left = 833.0
+offset_top = 428.0
+offset_right = 873.0
+offset_bottom = 480.0
+texture = ExtResource("8_risxq")
+
+[node name="foxyPlusBtn" type="Button" parent="Buttons"]
+anchors_preset = -1
+anchor_right = 0.02
+anchor_bottom = 0.025
+offset_left = 950.0
+offset_top = 427.0
+offset_right = 965.96
+offset_bottom = 462.8
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_fccs5")
+theme_override_font_sizes/font_size = 27
+action_mode = 0
+flat = true
+
+[node name="foxyMinusBtn" type="Button" parent="Buttons"]
+anchors_preset = -1
+anchor_right = 0.02
+anchor_bottom = 0.025
+offset_left = 834.0
+offset_top = 428.0
+offset_right = 849.96
+offset_bottom = 462.8
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_fccs5")
+theme_override_font_sizes/font_size = 27
+action_mode = 0
+flat = true
+
+[node name="foxyLabel" type="Label" parent="Buttons"]
+offset_left = 900.0
+offset_top = 432.0
+offset_right = 940.0
+offset_bottom = 483.0
+text = "0"
+label_settings = SubResource("LabelSettings_a13bp")
+horizontal_alignment = 2
+
+[node name="readyImg" type="TextureRect" parent="Buttons"]
+offset_left = 944.0
+offset_top = 578.0
+offset_right = 1130.0
+offset_bottom = 636.0
+texture = ExtResource("9_e4iwt")
+
+[node name="readyBtn" type="Button" parent="Buttons"]
+anchors_preset = -1
+anchor_right = 0.02
+anchor_bottom = 0.025
+offset_left = 945.0
+offset_top = 578.0
+offset_right = 1105.96
+offset_bottom = 619.8
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_fccs5")
+theme_override_font_sizes/font_size = 27
+action_mode = 0
+flat = true
+
+[connection signal="pressed" from="Buttons/freddyPlusBtn" to="." method="_on_freddy_plus_btn_pressed"]
+[connection signal="pressed" from="Buttons/freddyMinusBtn" to="." method="_on_freddy_minus_btn_pressed"]
+[connection signal="pressed" from="Buttons/bonniePlusBtn" to="." method="_on_bonnie_plus_btn_pressed"]
+[connection signal="pressed" from="Buttons/bonnieMinusBtn" to="." method="_on_bonnie_minus_btn_pressed"]
+[connection signal="pressed" from="Buttons/chicaPlusBtn" to="." method="_on_chica_plus_btn_pressed"]
+[connection signal="pressed" from="Buttons/chicaMinusBtn" to="." method="_on_chica_minus_btn_pressed"]
+[connection signal="pressed" from="Buttons/foxyPlusBtn" to="." method="_on_foxy_plus_btn_pressed"]
+[connection signal="pressed" from="Buttons/foxyMinusBtn" to="." method="_on_foxy_minus_btn_pressed"]
+[connection signal="pressed" from="Buttons/readyBtn" to="." method="_on_ready_btn_pressed"]
